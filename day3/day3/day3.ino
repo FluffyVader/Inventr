@@ -28,7 +28,7 @@
 #include "Arduino.h"  // include information about our HERO
  
 #define CABIN_LIGHTS_PIN 12        // Control our lander's lights using the HERO's pin 12
-#define CABIN_LIGHTS_SWITCH_PIN 4  // Connect our light switch to pin 4
+#define CABIN_LIGHTS_SWITCH_PIN 2  // Connect our light switch to pin 4
  
 // setup() gets called ONCE when our sketch is first run (after upload, when power is
 // restored, or when the HERO's reset button is pressed)
@@ -80,7 +80,7 @@ void loop()
  
   // Each time loop() begins digitalRead() reads the input pin attached to the switch and
   // compares the value read to HIGH (switch is ON)
-  if (digitalRead(CABIN_LIGHTS_SWITCH_PIN) == LOW) 
+  if (digitalRead(CABIN_LIGHTS_SWITCH_PIN) == HIGH) 
   {
     digitalWrite(CABIN_LIGHTS_PIN, HIGH);  // Switch is ON, turn on our lander's light
   } 
